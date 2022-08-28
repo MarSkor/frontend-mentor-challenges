@@ -20,47 +20,7 @@ body{
 
 
 
-/*  ---------- LAYOUT STYLES ----------  */
-/* if device is greater than 376px then do this */
-@media screen and (min-width: 376px)  {
-    main{
-        height: 100%;
-        display: flex;
-    }
-    
-    section .desktopbg-view{
-        width: 100%;
-        height: 100%;
-    }
 
-    
-    section {
-        height: 100vh;
-        width: 50vw;
-    }
-
-    .rightside{
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .mobilebg-view{
-        display: none;
-    }
-
-   .desktopbg-view{
-        display: block;
-    }
-
-    label{
-        font-size: 18px;
-        letter-spacing: 2px; 
-    }
-    
-   
-}
 
 
 /*  ---------- CARD STYLES ----------  */
@@ -139,65 +99,6 @@ body{
     letter-spacing: 1px;
 }
 
-@media screen and (max-width: 375px){
-    img.mobilebg-view{
-        object-fit: contain;
-        width: 100%;
-        height: 100%;
-    }
-
-    .rightside{
-        padding: 100px 10px 0px 10px;
-    }
-
-    form{
-        margin: 15px;
-    }
-
-    .card-front__body img, .card-back img{
-        max-width: 280px;
-    }
-
-    .card-front, .card-back{
-        font-size: 10px;
-    }
-
-    .card-front{
-        z-index: 9;
-        top: 150px;
-        left: 20px;
-    }
-
-    .card-back{
-        z-index: 8;
-        top: 50px;
-        left:65px;
-    }
-
-    .cardnumber{
-        letter-spacing: 0px;
-        font-size: 18px;
-        word-spacing: 8px;
-    }
-
-    .card-front__text .card-logo{
-        max-width: 50px;
-    }
-
-    .card-logo{
-        top: -55px;
-    }
-
-    .card-back__text{
-        top: 58px;
-        right: 38px;
-    }
-    
-}
-
-
-
-
 /*  ---------- FORM STYLES ----------  */
 
 #form{
@@ -206,7 +107,7 @@ body{
     margin: 0 auto;
  }
 
- label {
+ #form label {
     color:hsl(278, 68%, 11%);
     font-size: 13px;
     font-weight: 500;
@@ -231,19 +132,6 @@ body{
 
 .form-group_exp input{
     width: 65px;
-}
-
-
-
-@media screen and (max-width:377px){
-    .form-group_exp input{
-        width: 45px;
-    }
-    .cvc-group{
-        /* width: 45%; */
-        padding-left: 5px;
-    }
-     
 }
 
 
@@ -312,8 +200,10 @@ input[type="number"], input[type="text"] {
     height: 13px;
 }
 
+
 .form-group.error{
     visibility: visible;
+    background-image: url("../src/");
 }
 
 .form-group.success{
@@ -342,4 +232,119 @@ input[type="number"], input[type="text"] {
 
 .success-container .btn-container{
     padding-top: 20px;
+}
+
+
+
+
+/*  ---------- MEDIA QUERIES ----------  */
+/* if device is greater than 376px then do this */
+@media screen and (min-width: 376px)  {
+    main{
+        height: 100%;
+        display: flex;
+    }
+    
+    section .desktopbg-view{
+        width: 100%;
+        height: 100%;
+    }
+
+    
+    section {
+        height: 100vh;
+        width: 50vw;
+    }
+
+    .rightside{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobilebg-view{
+        display: none;
+    }
+
+   .desktopbg-view{
+        display: block;
+    }
+
+    label{
+        font-size: 18px;
+        letter-spacing: 2px; 
+    }
+    
+   
+}
+
+
+
+@media screen and (max-width:377px){
+    .form-group_exp input{
+        width: 45px;
+    }
+    .cvc-group{
+        /* width: 45%; */
+        padding-left: 5px;
+    }
+     
+}
+
+
+@media screen and (max-width: 375px){
+    img.mobilebg-view{
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+    }
+
+    .rightside{
+        padding: 100px 10px 0px 10px;
+    }
+
+    form{
+        margin: 15px;
+    }
+
+    .card-front__body img, .card-back img{
+        max-width: 280px;
+    }
+
+    .card-front, .card-back{
+        font-size: 10px;
+    }
+
+    .card-front{
+        z-index: 9;
+        top: 150px;
+        left: 20px;
+    }
+
+    .card-back{
+        z-index: 8;
+        top: 50px;
+        left:65px;
+    }
+
+    .cardnumber{
+        letter-spacing: 0px;
+        font-size: 18px;
+        word-spacing: 8px;
+    }
+
+    .card-front__text .card-logo{
+        max-width: 50px;
+    }
+
+    .card-logo{
+        top: -55px;
+    }
+
+    .card-back__text{
+        top: 58px;
+        right: 38px;
+    }
+    
 }
