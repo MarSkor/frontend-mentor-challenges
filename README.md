@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://dulcet-raindrop-f7caa5.netlify.app)
 
 ## My process
 
@@ -56,4 +56,4 @@ I will definitely continue to work more with form validation.
 
 ## Acknowledgments
 
-Pranshu-Sahu's solution gave me some inspiration for this project.[](https://github.com/Pranshu-Sahu/Front-end-mentor_card-detail-form)
+Pranshu-Sahu's solution gave me some inspiration for this project.[Their solution](https://github.com/Pranshu-Sahu/Front-end-mentor_card-detail-form)
