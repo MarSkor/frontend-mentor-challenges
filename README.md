@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution link](https://github.com/MarSkor/frontendmentor_interactive-card-details-form)
+- Solution URL: [Solution link](https://www.frontendmentor.io/solutions/interactive-card-details-form-9adACiTPFU)
 - Live Site URL: [Live site link](https://lustrous-puppy-5d0a32.netlify.app/)
 
 ## My process
