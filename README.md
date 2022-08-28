@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://dulcet-raindrop-f7caa5.netlify.app)
+- Solution URL: [Solution link](https://github.com/MarSkor/frontendmentor_interactive-card-details-form)
+- Live Site URL: [Live site link](https://dulcet-raindrop-f7caa5.netlify.app)
 
 ## My process
 
