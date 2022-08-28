@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../src/style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<main>
+
+  <div class="card card-front">
+    <div class="card-body card-front__body">
+      <img src="./images/bg-card-front.png" alt="card front">
+      <div class="card-text card-front__text">
+        <img class="card-logo" src="./images/card-logo.svg" alt="front card logo">
+        <div class="cardnumber">0000 0000 0000 0000</div>
+        <div class="card-dets">
+          <p class="card-name">Jane Appleseed</p>
+          <div class="card-exp">
+            <span class="card-exp__mm">00 </span>/
+            <span class="card-exp__yy">00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card card-back">
+    <div class="card-body card-back__body">
+      <img src="./images/bg-card-back.png" alt="card back">
+      <div class="card-text card-back__text">
+        <p class="card-cvc">000</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="leftside">
+    <img class="desktopbg-view" src="./images/bg-main-desktop.png" alt="abstract background image desktop">
+    <img class="mobilebg-view" src="./images/bg-main-mobile.png" alt="abstract background image mobile">
+  </section>
+  
+  <section class="rightside">
+    <form class="form-body" id="form">
+
+      <div class="form-group-row">
+        <div class="form-group">
+            <label for="">Cardholder Name</label>
+            <input type="text" name="cardholdername" id="cardholdername" placeholder="e.g. Jane Appleseed" maxlength="25">
+            <small class="error"></small>
+        </div>
+        <div class="form-group">
+            <label for="" >Card number</label>
+            <input type="text" name="cardnumber" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000" maxlength="16">
+            <small class="error"></small>
+        </div>
+      </div>
+   
+
+      <div class="form-group-row__bottom">
+        <div class="exp-date" style="padding-bottom: 10px;">
+            <div class="form-group">
+              <label>Exp.Date (MM/YY)</label>
+          </div>
+            <div class="form-group_exp">
+              <div class="form-group">
+                  <input type="text" id="mm" type="number" name="month" placeholder="MM" maxlength="2">
+                  <small class="error"></small>
+              </div>
+              <div class="form-group flex-bottom">
+                  <input type="text" id="yy" type="text" name="year" placeholder="YY" maxlength="2">
+                  <small class="error"></small>
+            </div>
+            </div>
+        </div>
+        <div class="form-group cvc-group">
+            <label for="">CVC</label>
+            <input type="text"id="cvc" name="cardcvc" placeholder="e.g. 123" maxlength="3">
+            <small class="error"></small>
+        </div>
+      </div> 
+      <div class="btn-container">
+        <button type="submit" id="btn" class="btn btn-default">Confirm</button>
+      </div>
+    </form>
+
+    <div class="success-container">
+      <img src="../images/icon-complete.svg" alt="successfully updated card">
+      <h2>Thank you!</h2>
+      <p>We've added your card details</p>
+      <div class="btn-container">
+        <button id="btn_complete" type="submit" class="btn btn-confirm">Continue</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Martine S. Skorbakk</a>.
+  </div>
+  <script src="../src/script/form.js"></script>
+</body>
+</html>

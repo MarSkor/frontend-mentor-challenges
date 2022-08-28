@@ -1,0 +1,345 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    background-color: hsl(0, 0%, 100%);
+}
+
+
+.desktopbg-view{
+    display: none;
+}
+
+
+
+
+/*  ---------- LAYOUT STYLES ----------  */
+/* if device is greater than 376px then do this */
+@media screen and (min-width: 376px)  {
+    main{
+        height: 100%;
+        display: flex;
+    }
+    
+    section .desktopbg-view{
+        width: 100%;
+        height: 100%;
+    }
+
+    
+    section {
+        height: 100vh;
+        width: 50vw;
+    }
+
+    .rightside{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobilebg-view{
+        display: none;
+    }
+
+   .desktopbg-view{
+        display: block;
+    }
+
+    label{
+        font-size: 18px;
+        letter-spacing: 2px; 
+    }
+    
+   
+}
+
+
+/*  ---------- CARD STYLES ----------  */
+.card{
+    position: absolute;
+    z-index: 9;
+}
+
+.card-body{
+    position: relative;
+    width: 100%;
+}
+
+
+.card-front{
+    top: 150px;
+    left: 130px;
+}
+
+.card-back{
+    bottom: 190px;
+    left: 210px;
+}
+
+.card-exp{
+    display: flex;
+    align-items:center;
+}
+
+
+/* positioning the cards for larger screens */
+@media only screen and (min-width:1441px){
+    .card-front{
+        top: 210px;
+        left: 300px;
+    }
+    
+    .card-back{
+        bottom: 190px;
+        left: 380px;
+    }
+}
+
+.card-front__text{
+    bottom: 10px;
+    left: 16px;
+    padding: 0px 8px 0px 8px;
+}
+
+.card-back__text{
+    top: 95px;
+    right: 65px;
+}
+
+.card-text, .card-logo{
+    position: absolute;
+    color:  hsl(0, 0%, 100%);
+}
+
+.cardnumber{
+    letter-spacing: 4px;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    word-spacing: 18px;
+}
+
+.card-logo{
+    top: -130px;
+}
+
+.card-dets{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 375px){
+    img.mobilebg-view{
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+    }
+
+    .rightside{
+        padding: 100px 10px 0px 10px;
+    }
+
+    form{
+        margin: 15px;
+    }
+
+    .card-front__body img, .card-back img{
+        max-width: 280px;
+    }
+
+    .card-front, .card-back{
+        font-size: 10px;
+    }
+
+    .card-front{
+        z-index: 9;
+        top: 150px;
+        left: 20px;
+    }
+
+    .card-back{
+        z-index: 8;
+        top: 50px;
+        left:65px;
+    }
+
+    .cardnumber{
+        letter-spacing: 0px;
+        font-size: 18px;
+        word-spacing: 8px;
+    }
+
+    .card-front__text .card-logo{
+        max-width: 50px;
+    }
+
+    .card-logo{
+        top: -55px;
+    }
+
+    .card-back__text{
+        top: 58px;
+        right: 38px;
+    }
+    
+}
+
+
+
+
+/*  ---------- FORM STYLES ----------  */
+
+#form{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+ }
+
+ label {
+    color:hsl(278, 68%, 11%);
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 6px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group_exp{
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.cvc-group{
+    width: 100%;
+    padding-left: 20px;
+}
+
+.form-group_exp input{
+    width: 65px;
+}
+
+
+
+@media screen and (max-width:377px){
+    .form-group_exp input{
+        width: 45px;
+    }
+    .cvc-group{
+        /* width: 45%; */
+        padding-left: 5px;
+    }
+     
+}
+
+
+.form-group_exp .form-group{
+    margin-right: 6px;
+}
+
+.form-group-row__bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group-row__bottom .exp-date, .form-group-row .form-group{
+    margin-bottom: 20px;
+}
+
+input[type="number"], input[type="text"] {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    border-radius: 4px;
+    height: 34px;
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: 10px;
+    outline: none;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.btn-container{
+    margin: 10px 0px;
+}
+
+.btn{
+    font-family: 'Space Grotesk', sans-serif;
+    display: block;
+    width: 100%;
+    border: none;
+    color: hsl(270, 3%, 87%);
+    background-color: hsl(278, 68%, 11%);
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 6px;
+}
+
+
+/*  ---------- SUCCESS & ERROR STYLES ----------  */
+
+.form-group.success input, .form-group.error input{
+    border-width:2px;
+}
+.form-group.success input {
+    border-color: hsl(278, 68%, 11%);
+}
+
+.form-group.error input {
+    border-color: red;
+ }
+
+.form-group small {
+    padding-top: 5px;
+    visibility: hidden;
+    color: red;
+    font-size: 10px;
+    height: 13px;
+}
+
+.form-group.error{
+    visibility: visible;
+}
+
+.form-group.success{
+    visibility: visible;
+}
+
+.form-group.error small{
+    visibility: visible;
+}
+
+
+
+/*  ---------- SUCCESS CONTAINER ----------  */
+.success-container{
+    display: none;
+    text-align: center;
+}
+
+.success-container h2{
+    color: hsl(278, 68%, 11%);
+}
+
+.success-container p {
+    color:  hsl(279, 6%, 55%);
+}
+
+.success-container .btn-container{
+    padding-top: 20px;
+}
