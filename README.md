@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution link](https://github.com/MarSkor/frontendmentor_interactive-card-details-form)
-- Live Site URL: [Live site link](https://dulcet-raindrop-f7caa5.netlify.app)
+- Live Site URL: [Live site link](https://lustrous-puppy-5d0a32.netlify.app/)
 
 ## My process
 
