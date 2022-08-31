@@ -12,7 +12,7 @@ async function fetchData(){
     try{
         const res = await fetch(url);
         const json = await res.json();
-        console.log(json)
+        // console.log(json)
 
         adviceContainer.innerHTML= `<h1>${json.slip.advice}</h1>`
         adviceNumber.innerHTML= `Advice #${json.slip.id}`
