@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="./style.css">
+  
+</head>
+<body>
+
+  <main>  
+    <div class="heading">
+      <img src="./images/logo.svg" alt="logo">
+    </div>
+    <section class="card-container">
+      <div class="card-wrap">
+       
+        <!-- calculator inputs  -->
+        <div class="card card-left">
+          <div class="group input-group">
+            <label for="bill">Bill</label>
+            <div class="input-field">
+              <img class="icon" src="./images/icon-dollar.svg" alt="dollar icon">
+              <input name="bill" class="bill" type="number" min="0" placeholder="0">
+            </div>
+          </div>
+
+          <div class="group btn-group-wrap">
+            <label>Select Tip %</label>
+            <div class="button-group">
+              <button class="btn btn-default tip" value="5">5%</button>
+              <button class="btn btn-default tip" value="10">10%</button>
+              <button class="btn btn-default tip" value="15">15%</button>
+              <button class="btn btn-default tip" value="25">25%</button>
+              <button class="btn btn-default tip" value="50">50%</button>
+              <input type="text" class="btn btn-custom" placeholder="Custom">
+            </div>
+          </div>
+          
+          <div class="group input-group">
+            <div class="inputwerror">
+              <label for="numberofpeople">Number of People</label>
+              <span class="error">Cant be zero</span>
+            </div>
+            <div class="input-field">
+              <img class="icon" src="./images/icon-person.svg" alt="person icon">
+              <input name="numberofpeople" class="numberofpeople" type="text" placeholder="0">
+              
+            </div>
+          </div>
+        </div>
+        
+
+        <!-- Calculation display  -->
+        <div class="card card-right">
+          <div class="group group-wrap">
+            <div class="group-text">
+              <span>Tip Amount</span>
+              <span>/ person</span>
+            </div>
+            <div class="group-number">
+              <span class="tipPerPerson">$0.00</span>
+            </div>
+          </div>
+
+          <div class="group group-wrap">
+            <div class="group-text">
+              <span>Total</span>
+              <span>/ person</span>
+            </div>
+            <div class="group-number">
+              <span class="total-value">$0.00</span>
+            </div>
+          </div>
+
+          <div class="group">
+            <button class="btn btn-reset" type="button" disabled>Reset</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Martine</a>.
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

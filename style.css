@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+*{
+    margin: 0;
+}
+
+html, body{
+    height: 100%,
+}
+
+body{
+    font-family: 'Space Mono', monospace;
+    background-color: hsl(185, 41%, 84%);
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center; 
+}
+
+main{
+    max-width: 100%;
+    padding: 20px 0px 80px 0px;
+}
+
+footer {
+    text-align: center;
+    color: hsl(183, 100%, 15%);
+    padding: 50px 20px 20px 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 13px;
+}
+
+.heading{
+    text-align: center;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: hsl(183, 100%, 15%);
+    padding-bottom: 30px;
+}
+
+
+  /* ------------ CARD STYLE ------------ */
+
+.card-container{
+    background-color: hsl(0, 0%, 100%);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    max-width:  1200px;
+}
+
+.card-wrap{
+    max-width:100%;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    align-content: space-between;
+}
+
+.card{
+    padding: 1.4rem;
+    width: 350px;
+    height: 370px;
+    border-radius: 15px;
+    display: grid;
+    align-content: space-around;
+    gap: 1rem;
+}
+
+.card-right{
+    background-color: hsl(183, 100%, 15%);
+}
+
+.group{
+    display: grid;
+    max-width: 100%;
+}
+
+
+/* right card style */
+.group-text{
+    display: grid;
+}
+
+.group-wrap{
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.group-text span:nth-child(1){
+    color: hsl(0, 0%, 100%);
+}
+
+.group-text span:nth-child(2){
+    color: hsl(184, 14%, 56%);
+    font-size: 13px;
+}
+
+.group-number{
+    text-align: right;
+    font-size: 32px;
+    color: hsl(172, 67%, 45%);
+    font-weight: 700;
+}
+
+/* responsive */
+@media (min-width: 600px) {
+    .card-wrap { grid-template-columns: repeat(2, 1fr); }
+    .button-group { grid-template-columns: repeat(3, 1fr); }
+}
+
+
+/* button group in 2 columns on smaller screens */
+@media (max-width: 599px) {
+    .button-group { grid-template-columns: repeat(2, 1fr); }
+    .card-container{
+        padding: 30px;
+    }
+}
+
+  /* ------------ INPUT STYLE ------------ */
+
+.input-field .icon{
+    position: absolute;
+}
+
+.input-field{
+    width: 100%;
+}
+
+.icon{
+    padding: 18px 10px ;
+    margin-left: 4px;
+    text-align: center;
+}
+
+label{
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: hsl(183, 100%, 15%) ;
+}
+
+input{
+    width: 100%;
+    padding: 8px;
+    text-align: right;
+    background-color:hsl(200, 46%, 95%);
+    border:transparent;
+    border-radius: 4px;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    color: hsl(183, 100%, 15%) ;
+    font-weight: 700;
+}
+
+
+input:focus {
+    outline: none;
+    border: 2px solid hsl(172, 67%, 45%);
+    font-weight: 700;
+}
+
+input:invalid {
+    outline: none;
+    border: 2px solid red;
+    font-weight: 700;
+}
+
+.btn-custom{
+    font-size: 16px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.inputwerror{
+    display: grid;
+    align-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr)
+}
+
+.error{
+    color: rgb(239, 0, 0);
+    align-items: center;
+    font-size: 12px;
+    text-align: right;
+    font-weight: 700;
+    margin: 0px 0px 10px;
+    display: none;
+    
+}
+
+/* ------------ BUTTON STYLE ------------ */
+
+.button-group{
+    display: grid;
+    gap: .8rem;
+}
+
+.btn{
+    font-family: 'Space Mono', monospace;
+    border: none;
+    color: hsl(0, 0%, 100%);
+    height: 35px;
+    border-radius: 4px;
+    transition: .2s ease;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-default{
+    background-color: hsl(183, 100%, 15%);
+}
+
+
+.btn-reset{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    text-transform: uppercase;
+}
+
+.btn-custom{
+    color:hsl(183, 100%, 15%);
+}
+
+/* button states */
+.btn:hover{
+    color: hsl(183, 100%, 15%) ;
+}
+
+.btn-default:hover{
+    background-color:  hsl(185, 41%, 84%);
+}
+
+.btn-reset:hover{
+    background-color:  hsl(185, 41%, 84%);
+}
+
+
+.active-button{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+
+.btn-reset:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
