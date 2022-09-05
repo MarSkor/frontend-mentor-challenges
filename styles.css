@@ -1,0 +1,151 @@
+
+/* ------------ GLOBAL ------------ */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+*{
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+
+body{
+    font-family: 'DM Sans', sans-serif;
+    position: relative;
+    min-height: 100vh;
+
+    display: grid;
+    background-color: hsl(27, 66%, 92%);
+    justify-content: center;
+    align-items: center;
+    color: hsl(25, 47%, 15%);
+}
+
+.wrapper{
+    width: 345px;
+    /* max-width: 1280px; */
+    /* width: 100%; */
+}
+
+  
+/* ------------ BAR CHART ------------ */
+
+.bar-content, .bar-header{
+    background-color:  hsl(33, 100%, 98%);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.bar-header, .bar-content__total-spending{
+    display: grid;
+    align-items: center;
+    align-content: center;
+}
+
+.bar-header{
+    color:  hsl(33, 100%, 98%);
+    height: 85px;
+    margin-bottom: 20px;
+    background-color: hsl(10, 79%, 65%);
+    grid-template-columns: repeat(2, 2fr); 
+}
+
+.bar-header span h3{
+    font-size: 24px;
+}
+
+.bar-header span p{
+    margin-bottom: 4px;
+    font-size: 13px;
+}
+
+.bar-header  span:nth-child(2){
+    display: grid;
+    justify-content: end;
+}
+
+.bar-content{
+    max-height: 450px;
+}
+
+.bar-content__chart div h2{
+    margin-bottom: 30px;
+}
+
+.bar-content__total-spending{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    margin-top: 30px;
+}
+
+.bar-content__total-spending div h2{
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.bar-content__total-spending div p{
+    color: hsl(28, 10%, 53%);
+    font-size: 14px;
+}
+
+.spending-group{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.spending-group span{
+    display: grid;         
+    align-items: end;      
+    justify-items: end;   
+}
+
+.spending-group span:nth-child(1){
+    color: hsl(25, 47%, 15%);
+    font-weight: 700;
+}
+
+.spending-group span:nth-child(2){
+    color: hsl(28, 10%, 53%);
+}
+
+.line{
+    margin-top: 25px;
+    border-color:hsl(27, 66%, 92%);
+    opacity: 0.3;
+}
+
+/* ------------ FOOTER ------------ */
+
+footer {
+    text-align: center;
+    padding: 50px 20px 20px 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 13px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+/* ------------ RESPONSIVE ------------ */
+
+@media screen and (min-width: 600px){
+    .wrapper{
+        width: 480px
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .bar-header{
+        padding: 24px 30px 20px 30px;
+    }
+}

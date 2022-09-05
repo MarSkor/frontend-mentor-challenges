@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!-- displays site properly based on user's device -->
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+</head>
+
+<body>
+<main class="wrapper">
+  <section class="bar-header">
+    <span>
+      <p>My Balance</p>
+      <h3>$921.48</h3>
+    </span>
+    <span>
+      <img src="./images/logo.svg" alt="logo">
+    </span>
+  </section>
+  <section class="bar-content">
+    <div class="bar-content__chart">
+      <div><h2>Spending - Last 7 days</h2></div>
+      <canvas id="bar-chart"></canvas>
+    </div>
+
+    <hr class="line">
+
+    <div class="bar-content__total-spending">
+      <div>
+        <p>Total this month</p>
+        <h2>$478.33</h2>
+      </div>
+      <div class="spending-group">
+        <span>+2.4%</span>
+        <span>from last month</span>
+      </div>
+    </div>
+  </section>
+</main>
+  
+<footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Martine</a>.
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="./script.js" type="module"></script>
+</body>
+</html>
