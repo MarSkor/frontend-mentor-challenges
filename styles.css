@@ -56,16 +56,16 @@ body{
     grid-template-columns: repeat(2, 2fr); 
 }
 
-.bar-header span h3{
+.bar-header div h3{
     font-size: 24px;
 }
 
-.bar-header span p{
+.bar-header div p{
     margin-bottom: 4px;
     font-size: 13px;
 }
 
-.bar-header  span:nth-child(2){
+.bar-header  div:nth-child(2){
     display: grid;
     justify-content: end;
 }
