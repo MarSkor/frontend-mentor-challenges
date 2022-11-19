@@ -280,11 +280,19 @@
         ". navigation content imagewrap ."
         ". navigation content imagewrap ."
         ". navigation content imagewrap .";
+
     }   
 
+    .portrait-img{
+        margin-left: 30rem;
+    }
 
-    .img-wrap-tech img{
-        max-width: 600px;
+    .technology-img-portrait{
+        margin-top: -240px;
+        position: absolute;
+        right: 0;
+        // margin: 0;
+        width: 515px;
     }
 
     .tech-info{

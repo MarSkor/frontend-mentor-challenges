@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { CSSTransition, SwitchTransition, TransitionGroup } from 'react-transition-group';
-
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import data from "./api/data.json";
 
 const crew = data.crew
-
-console.log("crew", crew)
 
 const Crew = () => {
   const [index, setIndex] = useState(0);

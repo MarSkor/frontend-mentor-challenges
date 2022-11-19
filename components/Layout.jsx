@@ -1,8 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+
 
 const Layout = ({ children }) => {
 
@@ -17,7 +16,6 @@ const Layout = ({ children }) => {
       </Head>
     <Navbar/>
     {children}
-    {/* <Footer/> */}
     <style jsx global>{`body {margin: 0; padding: 0;}`}</style>
     </>
   )
