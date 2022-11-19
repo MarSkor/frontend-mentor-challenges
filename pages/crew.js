@@ -18,7 +18,7 @@ const Crew = () => {
   
   
   return (
-    <main  id='crewpage' role="crew" className='grid-container grid-container--crew flow'>
+    <main  id='crewpage' className='grid-container grid-container--crew flow'>
       <h1 className='numbered-title'><span aria-hidden="true">02</span>Meet your crew</h1>
       
         <div className="img-wrap-crew">

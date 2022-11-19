@@ -10,7 +10,7 @@ export default function Home() {
   }, [])
   
   return (
-    <main id='homepage' role="home">
+    <main id='homepage'>
       <div className="wrapper">
         <section className="grid-container grid-container--home">
 
