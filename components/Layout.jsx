@@ -5,12 +5,10 @@ import Head from 'next/head';
 
 const Layout = ({ children }) => {
 
-  
-
   return (
     <>
       <Head>
-        <title>Frontend Mentor | Space tourism website</title>
+        <title>Frontend Mentor | Space tourism</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="shortcut icon" href="/assets/favicon-32x32.png" />
       </Head>

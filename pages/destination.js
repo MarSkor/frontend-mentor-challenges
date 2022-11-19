@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-
 import data from "./api/data.json";
 
 const destinations = data.destinations
-// console.log(destinations)
-
 
 const Destination = () => {
   const [index, setIndex] = useState(0);

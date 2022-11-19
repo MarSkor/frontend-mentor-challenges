@@ -4,8 +4,6 @@ import data from "./api/data.json";
 
 const technologies  = data.technology;
 
-console.log("technology", technologies)
-
 const Technology = () => {
   const [index, setIndex] = useState(0);
   const technology = technologies [index];

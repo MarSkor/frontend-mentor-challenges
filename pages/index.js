@@ -10,7 +10,7 @@ export default function Home() {
   }, [])
   
   return (
-    <div className='bg-img'>
+    <section>
       <div className="wrapper">
         <section className="grid-container grid-container--home">
 
@@ -30,6 +30,6 @@ export default function Home() {
           
         </section>
       </div>
-    </div>
+    </section>
   )
 }
