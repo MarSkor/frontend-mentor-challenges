@@ -16,7 +16,7 @@ const Technology = () => {
   }, [])
 
   return (
-    <section id='main' className='grid-container grid-container--technology flow'>
+    <main id='techpage' role="technology" className='grid-container grid-container--technology flow'>
       <h1 className='numbered-title'><span aria-hidden="true">03</span>Space launch 101</h1>
 
       <div className="number-navigation">
@@ -60,7 +60,7 @@ const Technology = () => {
         </ImageAnimation>
       </div>
 
-    </section>
+    </main>
   )
 }
 

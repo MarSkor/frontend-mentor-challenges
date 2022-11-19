@@ -10,7 +10,7 @@ export default function Home() {
   }, [])
   
   return (
-    <section>
+    <main id='homepage' role="home">
       <div className="wrapper">
         <section className="grid-container grid-container--home">
 
@@ -30,6 +30,6 @@ export default function Home() {
           
         </section>
       </div>
-    </section>
+    </main>
   )
 }

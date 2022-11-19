@@ -20,7 +20,7 @@ const Destination = () => {
 
   return (
 
-    <section id='main' className='grid-container grid-container--destination flow'>
+    <main  id='destinationpage' role="destination" className='grid-container grid-container--destination flow'>
       <h1 className='numbered-title'><span aria-hidden="true">01</span>Pick your destination</h1>
       
         <div className="img-wrap">
@@ -63,7 +63,7 @@ const Destination = () => {
             </div>
           </TextAnimation>
         </article>
-    </section>
+    </main>
   )
 }
 
