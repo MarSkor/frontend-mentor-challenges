@@ -1,0 +1,141 @@
+
+.tab{
+    font-family: var(--ff-sans-cond);
+    font-size: var(--fs-300);
+    color: var(--clr-light);
+    cursor: pointer;
+}
+
+.tab-body h2{
+    font-size: var(--fs-800);
+}
+
+.tab-body h3{
+    font-family: var(--ff-sans-cond);
+    color: var(--clr-light);
+    font-size: var(--fs-200);
+}
+
+.tab-body p{
+    color: var(--clr-white)
+}
+
+.tab-line{
+    display: flex;
+    flex-grow: 1;
+    height: 1px;
+    border-width:0;
+    z-index: 10;
+    border-color: rgb(255 255 255/0.25);
+    margin: 3.5rem 0 2.5rem;
+}
+
+hr.tab-line {
+    border-top-width: 1px;
+}
+
+.tab-head{
+    position: relative;
+}
+
+
+.tab::after, .tab.active::after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0; 
+}
+
+.tab.active::after {
+    width: 100%; 
+    left: 0; 
+}
+
+.tab.active::after {
+    background: rgb(255, 255, 255);
+}
+
+.tab:hover::before, 
+.tab:hover::after{
+    width: 100%; 
+    left: 0; 
+    background: rgba(255, 255, 255, 0.5);
+}
+
+
+//TAB & DOT NAV - SAME STYLING
+.tab-body h2, .dot-body h2{
+    color: var(--clr-white);
+    font-family: var(--ff-serif);
+    text-transform: uppercase;
+}
+
+
+// DOT STYLING
+
+.dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: rgba(255, 255, 255, 0.145);
+    border-radius: 50%;
+}
+
+
+.dot.active{
+    background-color: rgb(255, 255, 255);
+}
+
+
+// NUMBER STYLING
+.number{
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    font-family: var(--ff-serif);
+    color: var(--clr-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s ease;
+}
+
+.number-wrap{
+    display: flex;
+}
+.number-wrap .number{
+    margin: 0 .8rem;
+}
+
+.number:hover{
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.number.active{
+    background-color:var(--clr-white) ;
+    color: var(--clr-dark);
+}
+
+
+@media (min-width: 45em) {
+    .number{
+        cursor: pointer;
+        height: 80px;
+        width: 80px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        font-family: var(--ff-serif);
+        color: var(--clr-white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: var(--fs-600);
+    }
+
+}

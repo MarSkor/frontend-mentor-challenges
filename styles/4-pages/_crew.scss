@@ -1,0 +1,26 @@
+.crew{
+    background-image: url(../../public/assets/crew/background-crew-mobile.jpg);
+    min-height: 100vh;
+}
+
+@media (min-width: 35rem) {
+    .crew {
+        background-position: center center;
+        background-image: url(../../public/assets/crew/background-crew-tablet.jpg);
+    }
+}
+
+@media (min-width: 45rem) {
+    .crew {
+        background-image: url(../../public/assets/crew/background-crew-desktop.jpg);
+    }
+}
+
+.crew-info h2{
+    font-size: var(--fs-700);
+}
+
+.crew-info h3{
+    font-size: var(--fs-600);
+    color: rgba(255, 255, 255, 0.5);
+}

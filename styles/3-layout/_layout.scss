@@ -1,0 +1,326 @@
+.grid-container {
+    text-align: center;
+    display: grid;
+    place-items: center;
+    padding-inline: 1rem;
+    padding-bottom: 4rem;
+}
+
+
+.grid-container p:not([class]) {
+    max-width: 50ch;
+}
+
+.numbered-title {
+    grid-area: title;
+}
+
+
+// LAYOUT DESTINATION
+
+.grid-container--destination {
+    --flow-space: 2rem;
+    grid-template-areas: 
+        'title'
+        'imagewrap'
+        'tabs'
+        'content';
+}
+
+.grid-container--destination > .img-wrap {
+    grid-area: imagewrap;
+}
+
+.grid-container--destination > .img-wrap img{
+    max-width: 60%;
+}
+
+.grid-container--destination > .tab-head {
+    grid-area: tabs;
+}
+
+.grid-container--destination > .destination-info {
+    grid-area: content;
+}
+
+.destination-meta {
+    flex-direction: column;
+    border-top: 1px solid hsl( var(--clr-white) / .1);
+}
+
+.destination-meta p{
+    font-size: 1.75rem;
+}
+
+
+
+//LAYOUT CREW
+.grid-container--crew {
+    --flow-space: 2rem;
+    grid-template-areas: 
+        'title'
+        'imagewrap'
+        'content'
+        'navigation';
+}
+
+.grid-container--crew >.img-wrap-crew{
+    grid-area: imagewrap;
+}
+
+.grid-container--crew > .img-wrap-crew img{
+    max-width: 65%;
+}
+
+.grid-container--crew > .crew-info{
+    grid-area: content;
+}
+
+.grid-container--crew > .dot-navigation{
+    grid-area: navigation;
+}
+
+
+.grid-container--crew{
+    grid-template-areas: 
+    ". title title ."
+    ". imagewrap imagewrap ."
+    ". navigation navigation ."
+    ". content content .";
+}
+
+
+//LAYOUT TECHNOLOGY
+
+.technology-img-portrait{
+    display: none;
+}
+
+.grid-container--technology >.img-wrap-tech{
+    grid-area: imagewrap;
+}
+
+.grid-container--technology > .img-wrap-tech img{
+    max-width: 100%;
+}
+
+.grid-container--technology > .tech-info{
+    grid-area: content;
+}
+
+.grid-container--technology > .number-navigation{
+    grid-area: navigation;
+}
+
+.grid-container--technology{
+    grid-template-areas: 
+    ". title title ."
+    ". imagewrap imagewrap ."
+    ". navigation navigation ." 
+    ". content content .";
+}
+
+.grid-container--technology{
+    // consider removing?
+    padding-inline: 0rem;
+}
+
+
+.grid-container--technology p {
+    max-width: 50ch;
+}
+
+//MEDIA QUERIES
+@media (max-width: 35em){
+    .full-width{
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
+
+    .number-wrap{
+        display: flex;
+    }
+
+    .grid-container--technology p {
+        max-width: 50ch;
+    }
+}
+
+@media (min-width: 35em) {
+    .numbered-title {
+        justify-self: start;
+        margin-top: 2rem;
+    }
+    
+    .destination-meta {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .grid-container--crew{
+        grid-template-areas: 
+        ". title title ."
+        ". content content ."
+        ". navigation navigation ."
+        ". imagewrap imagewrap .";
+    }
+
+    .img-wrap-crew{
+        position: absolute;
+        bottom: 0;
+    }
+
+    .grid-container--technology{
+        grid-template-areas: 
+        ". title title ."
+        ". imagewrap imagewrap ."
+        ". navigation navigation ." 
+        ". content content .";
+    }
+
+}
+
+@media (min-width: 45em) {
+    .grid-container {
+        text-align: left;
+        column-gap: var(--container-gap, 2rem);
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+    }
+    
+    .grid-container--home {
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
+        justify-items: end;
+    }
+    
+    .grid-container--home > *:first-child {
+        grid-column: 2;
+    }
+
+    .grid-container--home > *:last-child {
+        grid-column: 3;
+    }
+    
+    .grid-container--destination {
+        justify-items: start;
+        align-content: start;
+        grid-template-areas: 
+            '. title title .'
+            '. imagewrap tabs .'
+            '. imagewrap content .';
+    }
+
+    .grid-container--destination > .img-wrap img {
+        max-width: 90%;
+    }
+
+    .destination-meta{
+        --gap: min(6vw, 6rem);
+        justify-content: start;
+    }
+
+
+    .grid-container--crew{
+        column-gap: 6.5em;
+        grid-template-areas: 
+        ". title title ."
+        ". content content ."
+        ". content imagewrap ."
+        ". navigation imagewrap .";
+    }
+    
+    .grid-container--crew > .img-wrap-crew img{
+        max-width: 100%;
+    }
+
+    .grid-container--crew{
+        align-items: end;
+        justify-items: start;
+    }
+
+    .img-wrap-crew{
+        position: absolute;
+        bottom: 0;
+        left: 54vw;
+        width: calc(100vw - 54vw);
+    }
+
+    .grid-container--crew article{
+        margin-top: 150px;
+    }
+
+    .grid-container--crew .dot-navigation{
+        margin-top: 200px;
+    }
+
+
+
+    .technology-img-portrait{
+        display: flex;
+    }
+
+    .technology-img-landscape{
+        display: none;
+    }
+
+    .grid-container--technology{
+        height: 70vh;
+        column-gap: 2rem;
+        width: fit-content;
+        margin: auto;
+        justify-items: center;
+        grid-template-columns: minmax(3rem, 1fr) minmax(4rem, 0)  minmax(0, 38rem);
+        grid-template-areas: 
+        ". title title title ."
+        ". navigation content imagewrap ."
+        ". navigation content imagewrap ."
+        ". navigation content imagewrap ."
+        ". navigation content imagewrap .";
+    }   
+
+
+    .img-wrap-tech img{
+        max-width: 600px;
+    }
+
+    .tech-info{
+        justify-content: space-evenly;
+    }
+    
+    .tech-info, .number-wrap{
+        display: flex;
+        flex-direction: column;
+        max-height: 100%;
+        height: 280px;
+    }
+
+    .number-wrap{
+        align-items: center;
+        justify-content: space-between;
+    }
+
+}
+
+
+
+// ANIMATION
+
+.text-animation-enter, .image-animation-enter{
+    transition: transform 0.6s ease-out, opacity 0.6s ease-in;
+    transform: scale(0.85);
+    opacity: 0;
+}
+
+.text-animation-enter-active, .image-animation-enter-active{
+    transform: none;
+    opacity: 1;
+}
+
+.text-animation-exit, .image-animation-exit{
+    display: none;
+}
+

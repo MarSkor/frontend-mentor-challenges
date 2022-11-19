@@ -1,0 +1,25 @@
+.home{
+    background-image: url(../../public/assets/home/background-home-mobile.jpg);
+    // object-fit: cover;
+    min-height: 100vh;
+}
+
+@media (min-width: 35rem) {
+    .home {
+        background-position: center center;
+        background-image: url(../../public/assets/home/background-home-tablet.jpg);
+    }
+}
+
+@media (min-width: 45rem) {
+    .home {
+        background-image: url(../../public/assets/home/background-home-desktop-v2.png);
+    }
+
+    .grid-container--home{
+        margin-top: 200px;
+    }
+}
+
+
+
