@@ -32,10 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://mellow-puppy-53cffc.netlify.app/)
-
-## My process
+- Solution URL: [SOLUTION](https://www.frontendmentor.io/solutions/responsive-space-tourism-website-0cHeHVa4DN)
+- Live Site URL: [LIVE URL](https://mellow-puppy-53cffc.netlify.app/)
 
 ### Built with
 
