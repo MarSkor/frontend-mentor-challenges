@@ -1,0 +1,321 @@
+:root{
+    --font: 'Epilogue', sans-serif;
+    --font-500: 500;
+    --font-700: 700;
+    --font-p: 18px;
+
+    --clr-neutral: hsl(0, 0%, 98%);
+    --clr-md-gray: hsl(0, 0%, 41%);
+    --clr-black: hsl(0, 0%, 8%);
+
+    --breakpoint-sm: 375px;
+    --breakpoint-md: 600px;
+    --breakpoint-lg: 1440px;
+}
+
+
+/*----------------------------------------------
+------------------------------------------------
+1. Universal Styles
+------------------------------------------------
+----------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font);
+    background-color: var(--clr-neutral);
+}
+
+.wrapper{
+    max-width: var(--breakpoint-lg);
+    margin: 0 auto;
+    /* padding: 20px; */
+}
+
+img{
+    max-width: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+/*----------------------------------------------
+------------------------------------------------
+2. Header & Nav Styles
+------------------------------------------------
+----------------------------------------------*/
+
+nav{
+    display: flex;
+ }
+
+nav .nav-links{
+    list-style: none;
+}
+
+nav a {
+    color: var(--clr-md-gray);
+}
+
+.logo{
+   padding: 1.4rem;
+}
+
+.nav-content, .nav-links{
+    display: flex;
+}
+
+.sub-menu-items li img{
+    padding: 0px 10px 0px 0px;
+}
+
+.sub-menu-items{
+    margin-top: 20px;
+    z-index: 10;
+    position: absolute;
+    box-shadow: 0px 6px 24px 0px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 6px 24px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 6px 24px 0px rgba(0,0,0,0.3);
+    padding: 14px 8px;
+    border-radius: 10px;
+    background-color: var(--clr-neutral);
+}
+
+.sub-menu-items li{
+    list-style-type: none;
+    color: var(--clr-md-gray);
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+
+
+nav .sub-menu-items{
+    /* display: none */
+}
+
+nav li.active .sub-menu-items{
+    display: block;
+}
+
+
+
+/* mobile menu icon ---------------- */
+.mobile-menu-icon{
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 1.4rem;
+    top: 1.4rem;
+    z-index: 999;
+}
+
+.bar{
+    display: block;
+    width: 28px;
+    height: 2px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: var(--clr-black);
+    border-radius:60px;
+}
+
+.mobile-menu-icon .bar:nth-child(2){
+    margin: 5px 0;
+}
+ 
+
+
+/* nav styles on screens larger than  37.5em */
+@media (min-width: 37.5em){
+    .nav-content{
+        align-items: center;
+    }
+}
+
+/* nav styles on screens smaller than  37.5em */
+@media (max-width: 37.5em){
+    .nav-links{
+        display: block;
+    }
+
+    .nav-content{
+        position: fixed;
+        inset: 0 0 0 50%;
+        z-index: 998;
+        background-color: var(--clr-neutral);
+        flex-direction: column;
+
+        padding: min(30vh, 6rem) 2em;
+        margin: 0;
+        
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+
+    .showMenu{
+        transform: translateX(0);
+    }
+
+    .change .bar1{
+        transform: rotate(45deg) translate(8px,2px);
+    }
+
+    .change .bar2{
+        opacity: 0;
+    }
+
+    .change .bar3{
+        transform: rotate(-45deg) translate(8px,-2px);
+    }
+
+    .mobile-menu-icon{
+        display: block; 
+    }
+  
+}
+
+
+
+
+/*----------------------------------------------
+------------------------------------------------
+3. Main Body Styles
+------------------------------------------------
+----------------------------------------------*/
+
+.hero{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 0px;
+}
+
+.hero-heading{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+}
+
+
+.hero-heading h1{
+    font-weight: var(--font-700);
+    font-size: 80px;
+}
+
+.hero-image-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.hero-img{
+    max-width:80%;
+}
+
+.hero-heading .clients{
+    margin-top: auto;
+}
+
+.clients{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+@media (max-width: 600px){
+    .hero{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto minmax(1fr, 1fr);
+    }
+    .hero-heading { 
+        grid-area: 2 / 1 / 3 / 2; 
+    }
+    .hero-image-wrap { 
+        grid-area: 1 / 1 / 2 / 2; 
+    }
+}
+
+@media (min-width: 600px){  
+    .hero-heading .hero-intro{
+        padding-top: 200px;
+    }
+}
+
+.btn{
+    border-radius: 12px;
+    font-family: var(--font);
+    cursor: pointer;
+}
+
+.btn-primary{
+    color: var(--clr-neutral);
+    background-color: var(--clr-black);
+    font-weight: var(--font-700);
+    max-width: 150px;
+    padding: 16px 20px;
+}
+
+.btn-secondary{
+    padding: 10px 20px;
+    border: 1px solid var(--clr-md-gray);
+}
+
+
+/*----------------------------------------------
+------------------------------------------------
+4. Sidebar Styles
+------------------------------------------------
+----------------------------------------------*/
+
+
+.overlay.active {
+    position: fixed;
+    background-color: hsl(0deg, 0%, 8%);
+    opacity: 0.6;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+/*----------------------------------------------
+------------------------------------------------
+5. Footer Styles
+------------------------------------------------
+----------------------------------------------*/
+footer{
+    text-align: center;
+    margin-top: 50px;
+    color: var(--clr-md-gray);
+}
+
+footer a {
+    color: var(--clr-black);
+    text-decoration: none;
+}
+
+
+/*----------------------------------------------
+------------------------------------------------
+6. Generic Styles
+------------------------------------------------
+----------------------------------------------*/
+
+
+
