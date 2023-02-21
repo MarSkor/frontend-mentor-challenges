@@ -6,3 +6,4 @@ All the challenges can be found here: [Frontend Mentor](https://www.frontendment
 
 - [Intro section with dropdown navigation](https://github.com/MarSkor/frontend-mentor-challenges/tree/Intro-section-with-dropdown-navigation)
 - [Space tourism website](https://github.com/MarSkor/frontend-mentor-challenges/tree/space-tourism-website)
+- [Tip calculator app](https://github.com/MarSkor/frontend-mentor-challenges/tree/tip-calculator-app)
