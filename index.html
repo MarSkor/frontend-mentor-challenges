@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
@@ -18,20 +18,22 @@
 
     <nav class="top-nav wrapper">
       <div class="logo">
-        <img src="./assets/logo.svg" alt="logo">
+        <img src="./assets/icons/logo.svg" alt="logo">
       </div>
 
       <div class="nav-content" id="mobile-menu-content">
         <ul class="nav-links">
-          <li class="sub-menu"><a href="#features">Features <img class="arrow-icon" src="./assets/icon-arrow-down.svg" alt="arrow-down"></a>
+          <li class="sub-menu collapsible">
+            <a href="#features">Features <img class="arrow-icon" src="./assets/icons/icon-arrow-down.svg" alt="arrow-down"></a>
             <ul class="sub-menu-items">
-              <li><img src="./assets/icon-todo.svg" alt="todo list">Todo List</li>
-              <li><img src="./assets/icon-calendar.svg" alt="calendar">Calendar</li>
-              <li><img src="./assets/icon-reminders.svg" alt="reminders">Reminder</li>
-              <li><img src="./assets/icon-planning.svg" alt="planning">Planning</li>
+              <li><img src="./assets/icons/icon-todo.svg" alt="todo list">Todo List</li>
+              <li><img src="./assets/icons/icon-calendar.svg" alt="calendar">Calendar</li>
+              <li><img src="./assets/icons/icon-reminders.svg" alt="reminders">Reminder</li>
+              <li><img src="./assets/icons/icon-planning.svg" alt="planning">Planning</li>
             </ul>
           </li>
-          <li class="sub-menu"><a href="#company">Company <img src="./assets/icon-arrow-down.svg" alt="arrow-down"></a>
+          <li class="sub-menu collapsible">
+            <a href="#company">Company <img src="./assets/icons/icon-arrow-down.svg" alt="arrow-down"></a>
             <ul class="sub-menu-items">
               <li>History</li>
               <li>Our Team</li>
@@ -63,34 +65,32 @@
     <section class="wrapper hero">
       <div class="hero-heading">
         <div class="hero-intro">
-          <h1>Make remote work</h1>
+          <h1>Make <br> remote work</h1>
           <p>Get your team in sync, no matter your location. Streamline processes, 
           create team rituals, and watch productivity soar.</p>
           <button class="btn btn-primary" type="button">Learn more</button>
         </div>
         <div class="clients">
-          <img src="./assets/client-databiz.svg" alt="databiz">
-          <img src="./assets/client-audiophile.svg" alt="audiophile">
-          <img src="./assets/client-meet.svg" alt="meet">
-          <img src="./assets/client-maker.svg" alt="maker">
+          <img src="./assets/icons/client-databiz.svg" alt="databiz">
+          <img src="./assets/icons/client-audiophile.svg" alt="audiophile">
+          <img src="./assets/icons/client-meet.svg" alt="meet">
+          <img src="./assets/icons/client-maker.svg" alt="maker">
         </div>
       </div>
 
       <picture class="hero-image-wrap">
-        <source srcset="./assets/image-hero-desktop.png" media="(min-width: 600px)"/>
-        <img class="hero-img" src="./assets/image-hero-mobile.png" alt="hero image mobile">
+        <source srcset="./assets/images/image-hero-desktop.png" media="(min-width: 600px)"/>
+        <img class="hero-img" src="./assets/images/image-hero-mobile.png" alt="hero image mobile">
       </picture>
     </section>
-    
   </main>
 
   <footer>
    <p>
     Challenge by <a href="https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Martine</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/MarSkor">Martine</a>.
    </p>
   </footer>
-
 
 
   <script src="./script.js"></script>
