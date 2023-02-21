@@ -9,3 +9,4 @@ All the challenges can be found here: [Frontend Mentor](https://www.frontendment
 - [Tip calculator app](https://github.com/MarSkor/frontend-mentor-challenges/tree/tip-calculator-app)
 - [Advice generator app](https://github.com/MarSkor/frontend-mentor-challenges/tree/advice-generator-app)
 - [Interactive card details form](https://github.com/MarSkor/frontend-mentor-challenges/tree/interactive-card-details-form)
+- [Expenses chart component](https://github.com/MarSkor/frontend-mentor-challenges/tree/expenses-chart-component)
